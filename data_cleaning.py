@@ -9,9 +9,9 @@ order_counts = data["order"].str.split(" ", expand=True).stack().value_counts()
 order_counts = order_counts[order_counts.index != ""]
 
 # Replace [food_list] and [drinks_list] with your actual lists
-food_list = ['fries', 'kebab', 'spaghetti_bolo', 'pad_thai', 'durum', 'extra_fries', 'pizza_margherita', 'arrabiata_vegi', 'pizza_pepperoni', 'chicken_pok�', 'croquette_balls', 'carbonara', 'mayo', 'caesar_salad', 'spring_rolls', 'mexicano', 'greek_salad', 'tofu_pok�', 'bicky', 'pizza_4_cheeses', 'bacon_&_baked_brie_salad', 'green_curry_pork', 'green_curry_tofu']
+food_list = ['fries', 'kebab', 'spaghetti_bolo', 'pad_thai', 'durum', 'extra_fries', 'pizza_margherita', 'arrabiata_vegi', 'pizza_pepperoni', 'chicken_poke', 'croquette_balls', 'carbonara', 'mayo', 'cocktail_sauce', 'caesar_salad', 'spring_rolls', 'mexicano', 'greek_salad', 'tofu_poke', 'bicky', 'pizza_4_cheeses', 'bacon_&_baked_brie_salad', 'green_curry_pork', 'green_curry_tofu', 'quarter_pizza_margherita', 'quarter_pizza_pepperoni', 'quarter_pizza_4_cheeses', 'ketchup', 'garlic_bread', 'salmon_poke', 'green_sauce', 'kebab_vegi', 'red_curry_tofu', 'durum_vegi', 'frikandel', 'garlic_bread', 'garlic_sauce', 'green_curry_chicken', 'kebab_vegi', 'ketchup', 'red_curry_chicken', 'red_curry_pork', 'red_curry_tofu', 'salmon_poke', 'salmon_tofu']
 
-drinks_list = ['beer', 'coke', 'still_water', 'white_wine', 'desperados', 'cava', 'red_wine', 'aperol_spritz', 'sparkling_water', 'red_berry_madness_juice', 'cocktail_sauce', 'passion_delight_juice', 'turkish_coffee']
+drinks_list = ['beer', 'coke', 'still_water', 'white_wine', 'desperados', 'cava', 'red_wine', 'aperol_spritz', 'sparkling_water', 'red_berry_madness_juice', 'passion_delight_juice', 'turkish_coffee', 'green_&_clean_juice']
 
 # Separate orders into food and drinks
 food_order_counts = order_counts[order_counts.index.isin(food_list)]
